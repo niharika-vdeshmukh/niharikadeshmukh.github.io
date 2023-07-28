@@ -7,6 +7,7 @@
     // });
     $(document).ready(function () {
         $('.navbar').show();
+        $('.resume').show();
     });
 
 
@@ -93,10 +94,10 @@
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
             $('.back-to-top').fadeIn('slow');
-            $('.resume').fadeIn('slow');
+            // $('.resume').fadeIn('slow');
         } else {
             $('.back-to-top').fadeOut('slow');
-            $('.resume').fadeIn('slow');
+            // $('.resume').fadeIn('slow');
         }
     });
     $('.back-to-top').click(function () {

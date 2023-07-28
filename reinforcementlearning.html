@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Niharika Deshmukh</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    
+    
+    <!-- Navbar Start -->
+    
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+    
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse" style="float:right;" >
+    
+            <div class="navbar-nav m-auto py-0">                
+                <a href="https://niharika-vdeshmukh.github.io/" class="nav-item nav-link" target="_blank" style="margin-bottom: 0px;">About Me</a>
+            </div>
+    
+        </div>
+    
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Scroll to Bottom -->
+    
+    <a href="#about"><i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i></a>
+
+    
+    <!-- About Start -->
+    
+    <div class="container-fluid d-flex align-items-center mb-5 py-5" id="about" style="min-height: 100vh;">
+        
+        <div class="container">
+            
+            <div class="position-relative d-flex align-items-center justify-content-center pt-5">
+                
+                <h1 class="position-absolute text-uppercase text-primary py-5 pt-5">MARL For Traffic Control</h1>
+            </div>
+            <div>
+                <p style="margin-top: 10vh;" class="text-center">Project Contributers:
+                    <a href="https://linkedin.in/harshith-pokala-muni">Harshith Pokala Muni &#128526</a>,
+                    <a href="https://www.linkedin.com/in/anuja-wani/">Anuja Wani &#128525</a>
+                     and
+                    <a href="https://www.linkedin.com/in/niharika-deshmukh/">Niharika Deshmukh &#128563</a>. 
+                    <br>
+                    This project was done under the guidance of <a href="https://cse.buffalo.edu/~avereshc/">Dr. Prof. Alina Vereshchaka</a> as a part of course <a href="https://cse.buffalo.edu/~avereshc/rl.html">CSE 510 - reinforcement learning</a>.
+                </p>                       
+                
+            </div>
+            <div class="row align-items-center pt-5">
+
+                <div class="col-lg-4 pb-4 pb-lg-0">
+                    <div class="navbar-nav m-auto py-0">
+                    <!-- <img class="img-fluid rounded w-100" src="img/about.jpg" alt=""> -->
+                    <a href="#home" class="nav-item nav-link active">About Project</a>
+                    <a href="#environment" class="nav-item nav-link">Environment Details</a>
+                    <a href="#implementation" class="nav-item nav-link">Implementation Details</a>
+                    <a href="#summary" class="nav-item nav-link">Summary</a>
+                    </div>
+
+                </div>
+                
+                <div class="col-lg-6">
+
+                    <p class="text-justify">
+                        Traffic congestion is a major issue in cities and solving this problem will have an impact on many lives. 
+                        In this project we designed a multi-agent reinforcement learning algorithm to solve the problem of traffic congestion. 
+                        For this project we used a multi-agent environment- <a href="https://github.com/koulanurag/ma-gym" target="_blank">TrafficJunction</a>. 
+                        The environment is designed in a way that it aims to reduce traffic and number of collisions between vehicles. 
+                        Vehicles are agents in this environment. 
+                        To solve this environment we experimented with Tabular algorithms such as Q-learning, SARSA, deep Q-networks such as DQN, DDQN and actor critic methods.
+
+                    </p>
+                    <img src="RLImages/TrafficJunction4-v0.gif" width="200vh" height="200vh">
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- About End -->
+
+    <!-- Skill Start -->
+    <div class="container-fluid pt-5" id="environment">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Environment Details:</h5>
+            </div>
+            <div class="row align-items-center">
+            <div class="col-lg-8 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-2">
+                        <p class="text-justify">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+
+                            We used ma-gym, a collection of multi-agent environments based on openAI gym for this project.
+                        </p>
+                    </div>
+                    <div class="position-relative mb-2">
+                        <p class="text-justify">    
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+
+                            Environment used: TrafficJunction4-v1. It is a 4-way junction on a 14x14 grid.
+
+                        </p>
+                    </div>
+                    <div class="position-relative mb-2">
+                        <p class="text-justify"> 
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+
+                            Goal: to reduce traffic jams and number of collisions in a traffic junction.
+                        </p>
+                    </div>
+                    <div class="position-relative mb-2">
+                        <p class="text-justify"> 
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+
+                            Rewards: Whenever two cars overlap then a collision occurs. If collision occurs then the agent is penalized with a reward of -10. To prevent traffic jam a reward of -0.01 * τ is given to the agent. τ is the number of time steps taken since the car has arrived.
+                        </p>
+                    </div>
+                    <div class="position-relative mb-2">
+                        <p class="text-justify">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+
+                            
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+
+                            Actions: There are two possible actions in the environment.
+                            
+                            <br>Action 0 - Gas. The agent moves forward by one cell.
+                            <br>Action 1- brake. The agent stays in the same cell.
+                        </p>
+                    </div>
+                    <div class="position-relative mb-2">
+                        <p class="text-justify">        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+
+                            Observation space: The state of each agent is a vector with (3^2) *(|n| + |l| + |r|) dimensions. The variables n,l,r represent the one-hot representation of the agent’s id, current location of the agent and the assigned route number. There are two versions of the environment:
+                            <br>V0 - Each agent gets its own local observation.
+                            <br>V1 - Each agent gets the local observation of every other agent.
+                        </p>
+                    </div>
+                    <div class="position-relative mb-2">
+                        <p class="text-justify">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+
+                            Episode terminates when all the agents reach the goal position or when the number of timesteps in an episode exceeds the max_timesteps(40).
+                        </p>        
+                    </div>  
+                   
+                </div>
+                
+            </div>
+            <div class="col-lg-2">
+                <img src="RLImages/image16.png">
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Skill End -->
+
+    <!--Implementation Start-->
+    <div class="container-fluid pt-5" id="implementation">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Implementation Details</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <p class="text-justify">
+                            In this project we used ma-gym environment to develop a multi-agent algorithm to reduce traffic jam and accidents.
+                            To solve this environment we experimented with Tabular algorithms such as Q-learning, SARSA, deep Q-networks such as DQN, DDQN and actor critic methods.
+                            We trained environment using base configuration: 
+                            <br>Discount factor: 0.99
+                            <br>Learning rate: 0.2
+                            <br>Number of Episodes: 1000
+                            <br>Gamma: 0.99
+                            <br> Initially we experimented with one agent for all the algorithms, after getting promising results we trained two agents for each algorithm.
+                            Both the agents knew the local observation of every agent, which improved learning. 
+                            Results were optimistic, thus we didn't have to configure reward function and we contniued with existing reward function.
+                            For every algorithm we tried to tune Hyperparameters, however we found that base configuration can work for all the algorithms. 
+                        </p>    
+                        
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Summary End-->
+
+    
+
+    
+
+    <!--Use case-->
+    <div class="container-fluid pt-5" id="summary">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Summary</h5>
+            </div>
+
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <p class="text-justify">
+                            We started by training our environment on q-learning algorithm and SARSA. 
+                            <br>For both the experiments the learning rate used was 0.2 and gamma value was 0.99.  
+                            <br>The environment works well on both the algorithms. For Q-learning evaluation, we got  an average reward of -0.886 for agent 1 and  -3.409 for agent 2. 
+                            <br>For SARSA evaluation, we got an average reward of -0.886 for one agent and -3.487 for the other. 
+                            <br>Later we implemented DQN, Double DQN, Q actor critic and Advantage Actor Critic algorithm on our multi-agent environment. 
+                            <br>DQN and Double DQN took 10000 episodes each to achieve convergence whereas Q actor critic and Advantage actor critic took 20000 episodes each for getting better results.
+                            Average reward for each algorithm is as follows:
+                            <table class="table table-striped table-hover table-bordered">
+                                <tr>
+                                    <th>Algorithm</th>
+                                    <th>Number of episodes trained</th>
+                                    <th>Agent 1 average reward</th>
+                                    <th>Agent 2 average reward</th>
+                                </tr>
+                                <tr>
+                                    <td>Q-Learning</td>
+                                    <td>30000</td>
+                                    <td>-0.886</td>
+                                    <td>-3.409</td>
+                                </tr>
+                                <tr>
+                                    <td>SARSA</td>
+                                    <td>30000</td>
+                                    <td>-0.886</td>
+                                    <td>-3.487</td>
+                                </tr>
+                                <tr>
+                                    <td>DQN</td>
+                                    <td>30000</td>
+                                    <td>-0.886</td>
+                                    <td>-3.487</td>
+                                </tr>
+                                <tr>
+                                    <td>DDQN</td>
+                                    <td>30000</td>
+                                    <td>-0.886</td>
+                                    <td>-3.487</td>
+                                </tr>
+                                <tr>
+                                    <td>Q-Actor Critic</td>
+                                    <td>30000</td>
+                                    <td>-0.886</td>
+                                    <td>-3.487</td>
+                                </tr>
+                                <tr>
+                                    <td>Advantage Actor Critic</td>
+                                    <td>30000</td>
+                                    <td>-0.886</td>
+                                    <td>-3.487</td>
+                                </tr>
+                        </table>    
+                        </p>        
+                    </div>        
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <!--Use case End-->
+    
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        
+        <div class="container text-center py-5">
+        
+            <div class="d-flex justify-content-center mb-4">
+        
+                <a class="btn btn-light btn-social mr-2" href="http://www.linkedin.com/in/niharika-deshmukh/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                
+                <a class="btn btn-light btn-social mr-2" href="http://github.com/niharika-vdeshmukh" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a class="btn btn-light btn-social mr-2" href="mailto:niharikad2209@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+            </div>
+        
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+
+        </div>
+
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="Resume.pdf" class="btn px-0 btn-outline-dark resume"><i class="fa fa-download"></i></a>
+    <p class="resumetext">Resume</p>
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
