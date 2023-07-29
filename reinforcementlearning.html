@@ -81,6 +81,12 @@
                     <a href="#home" class="nav-item nav-link active">About Project</a>
                     <a href="#environment" class="nav-item nav-link">Environment Details</a>
                     <a href="#implementation" class="nav-item nav-link">Implementation Details</a>
+                    <a href="#qlearning" class="nav-item nav-link">Q-Learning Implementation Details</a>
+                    <a href="#sarsa" class="nav-item nav-link">SARSA Implementation Details</a>
+                    <a href="#dqn" class="nav-item nav-link">DQN Implementation Details</a>
+                    <a href="#ddqn" class="nav-item nav-link">DDQN Implementation Details</a>
+                    <a href="#qac" class="nav-item nav-link">Q-Actor Critic Implementation Details</a>
+                    <a href="#a2c" class="nav-item nav-link">Advantage Actor Implementation Details</a>
                     <a href="#summary" class="nav-item nav-link">Summary</a>
                     </div>
 
@@ -198,26 +204,216 @@
             <div class="col-lg-12 pt-5">
                 <div class="border-left border-primary pt-2 pl-4 ml-2">
                     <div class="position-relative mb-4">
-                        <p class="text-justify">
-                            In this project we used ma-gym environment to develop a multi-agent algorithm to reduce traffic jam and accidents.
-                            To solve this environment we experimented with Tabular algorithms such as Q-learning, SARSA, deep Q-networks such as DQN, DDQN and actor critic methods.
-                            We trained environment using base configuration: 
-                            <br>Discount factor: 0.99
-                            <br>Learning rate: 0.2
-                            <br>Number of Episodes: 1000
-                            <br>Gamma: 0.99
-                            <br> Initially we experimented with one agent for all the algorithms, after getting promising results we trained two agents for each algorithm.
-                            Both the agents knew the local observation of every agent, which improved learning. 
-                            Results were optimistic, thus we didn't have to configure reward function and we contniued with existing reward function.
-                            For every algorithm we tried to tune Hyperparameters, however we found that base configuration can work for all the algorithms. 
-                        </p>    
+                        <div class="position-relative mb-2">
+                            <p class="text-justify">        
+                                <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+    
+                                In this project we used ma-gym environment to develop a multi-agent algorithm to reduce traffic jam and accidents.
+                                To solve this environment we experimented with Tabular algorithms such as Q-learning, SARSA, deep Q-networks such as DQN, DDQN and actor critic methods.
+                                We trained environment using base configuration: 
+                                <br>Discount factor: 0.99
+                                <br>Learning rate: 0.2
+                                <br>Number of Episodes: 1000
+                                <br>Gamma: 0.99
+                            </p>
+                        </div>
+                        <div class="position-relative mb-2">
+                            <p class="text-justify">
+                                <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+    
+                                Initially we experimented with one agent for all the algorithms, after getting promising results we trained two agents for each algorithm.
+                                Both the agents knew the local observation of every agent, which improved learning. 
+                                Results were optimistic, thus we didn't have to configure reward function and we contniued with existing reward function.
+                                For every algorithm we tried to tune Hyperparameters, however we found that base configuration can work for all the algorithms.                             </p>        
+                        </div>  
+                           
                         
                     </div>        
                 </div>
             </div>
         </div>
     </div>
+    <!--Implementation End-->
+
+    <!--q-learning Start-->
+    <div class="container-fluid pt-5" id="qlearning">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Q-Learning Implementation Details</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="row">
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/qlearningagent1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/qlearningagent2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/qlearningtesting.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Summary End-->
+
+    <!--SARSA Start-->
+    <div class="container-fluid pt-5" id="sarsa">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">SARSA Implementation Details</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="row">
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/sarsaagent1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/sarsaagent2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/sarsatesting.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SARSA End-->
+
+    <!--DQN Start-->
+    <div class="container-fluid pt-5" id="dqn">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">DQN Implementation Details</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="row">
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/dqnagent1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/dqnagent2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/dqntesting.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--DQN End-->
+
+    <!--DQN Start-->
+    <div class="container-fluid pt-5" id="ddqn">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">DDQN Implementation Details</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="row">
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/ddqnagent1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/ddqnagent2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/ddqntesting.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--DQN End-->
+
+    <!--DQN Start-->
+    <div class="container-fluid pt-5" id="qac">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Q-Actor Critic Implementation Details</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="row">
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/qacagent1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/qacagent2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/qactesting.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--DQN End-->
+
+    <!--DQN Start-->
+    <div class="container-fluid pt-5" id="a2c">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Advantage Actor Critic Implementation Details</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="row">
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/a2cagent1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/a2cagent2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5">
+                        <div class="position-relative mb-4">
+                            <img class="img-fluid rounded w-100" src="RLImages/a2ctesting.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--DQN End-->
 
     
 
