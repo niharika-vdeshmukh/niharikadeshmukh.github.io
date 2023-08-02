@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Niharika Deshmukh</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    
+    
+    <!-- Navbar Start -->
+    
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+    
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse" style="float:right;" >
+    
+            <div class="navbar-nav m-auto py-0">                
+                <a href="https://niharika-vdeshmukh.github.io/" class="nav-item nav-link" target="_blank" style="margin-bottom: 0px;">About Me</a>
+            </div>
+    
+        </div>
+    
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Scroll to Bottom -->
+    
+    <a href="#about"><i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i></a>
+
+    
+    <!-- About Start -->
+    
+    <div class="container-fluid d-flex align-items-center mb-5 py-5" id="about" style="min-height: 100vh;">
+        
+        <div class="container">
+            
+            <div class="position-relative d-flex align-items-center justify-content-center pt-5">
+                
+                <h1 class="position-absolute text-uppercase text-primary py-5 pt-5">Taco-DB</h1>
+            </div>
+            <div>
+                <p style="margin-top: 10vh;" class="text-center">Project Contributers:
+                    <a href="https://www.linkedin.com/in/viswanath-vankadara/">Viswanath Vankadara &#128526</a>
+                     and
+                    <a href="https://www.linkedin.com/in/niharika-deshmukh/">Niharika Deshmukh &#128563</a>. 
+                    <br>
+                    Content credits: Viswanath Vankadara
+                    <!-- This project was done under the guidance of <a href="https://cse.buffalo.edu/~avereshc/">Dr. Prof. Alina Vereshchaka</a> as a part of course <a href="https://cse.buffalo.edu/~avereshc/rl.html">CSE 510 - reinforcement learning</a>. -->
+                </p>                       
+                
+            </div>
+            <div class="row align-items-center pt-5">
+
+                <div class="col-lg-4 pb-4 pb-lg-0">
+                    <div class="navbar-nav m-auto py-0">
+                    <!-- <img class="img-fluid rounded w-100" src="img/about.jpg" alt=""> -->
+                    <a href="#home" class="nav-item nav-link active">About Project</a>
+                    <a href="#hlproblem" class="nav-item nav-link">High Level Description</a>
+                    <a href="#fileinterface" class="nav-item nav-link"> File I/O Interface</a>
+                    <a href="#buffermanager" class="nav-item nav-link">Buffer Manager</a>
+                    <a href="#datalayout" class="nav-item nav-link">Data Layout and Access Methods</a>
+                    <a href="#btree" class="nav-item nav-link">B-Tree Index</a>
+                    <a href="#basicquery" class="nav-item nav-link">Basic Query Processing</a>
+                    <a href="#joins" class="nav-item nav-link">Join Algorithms</a>
+                    <a href="#queryplans" class="nav-item nav-link">Building Optimized Query Plans</a>
+
+                    </div>
+
+                </div>
+                
+                <div class="col-lg-6">
+
+                    <p class="text-justify">
+                        I think as students of computer science and software engineers, we must have dealt with databases at some point in our lives so far. 
+                        We were taught SQL during our undergrad and we inserted, read, updated and deleted data from a SQL database. 
+                        I knew the SELECT statements, triggers, procedures, indexes, etc. but it was only limited to the application part of the science. 
+                        I just knew what they are and how to use them. 
+                    </p>
+                    <p>
+                        Database by nature, seems so simple. It is a store room for data. 
+                        We put things, we want to retrieve things, we can update things and we can discard some of them if we want to. 
+                        But just like a lot of simple things in the world, achieving simplicity takes a lot of mindful thinking to get to where they are. 
+                        A myriad of things are abstracted away from the end user, so that it becomes simple to use. 
+                        So being curious in nature, I wanted to know and understand (and if possible build by myself) what happens under the hood of a database. 
+                        This led me to take up the course CSE 562: Database Systems, during my master’s at UB.
+                    </p>
+                    <!--  -->
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- About End -->
+
+    <!--Implementation Start-->
+    <div class="container-fluid pt-5" id="hlproblem">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">High level Description</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    
+                    <div class="position-relative mb-4">
+                        <p class="text-justify">
+                            In this project we designed and developed Taco DB. 
+                            Taco DB is a single threaded mini relational database management system built in C++11.
+                            We built all the layers in the below image (in DBMS section) apart from SQL parser.
+                            We built Taco DB in phases, one component at a time. This gave us good insight into SINGLE RESPONSIBILITY principle and about ABSTRACTION as usual.
+                        </p> 
+                        <img class="img-fluid rounded" src="DBImages/Tacodbimage.png" style="width: 80vh;"/>       
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Implementation End-->
+
+    <!--Implementation Start-->
+    <div class="container-fluid pt-5" id="fileinterface">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">File I/O interface</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p>Data needs to be stored in the secondary (non-volatile) storage at the end of the day, for durability.</p>        
+            
+                        </div>
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p>Lowest layer of DBMS software manages space on disk.</p>        
+            
+                        </div>
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p>So we implemented a simple file system named FSFile  using the Linux I/O system calls (e.g., open(2), close(2), pread(2), pwrite(2), etc.)</p>        
+            
+                        </div>
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p class=""><strong>We ignored all the thread-safety related requirements, since we’re building a single-threaded database</strong></p>        
+            
+                        </div>
+                        
+                        <img class="img-fluid rounded" src="DBImages/FSManager.png" style="width: 70vh;"/>       
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Implementation End-->
+
+    <!--Implementation Start-->
+    <div class="container-fluid pt-5" id="buffermanager">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Buffer Manager</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <p class=""><strong>Thought Process</strong></p>
+                        <ul>
+                            <li>Data pages are stored in disk file</li>
+                            <ul>
+                                <li>Suppose we want to count how many rows there are in a database table, we need to scan all pages</li>
+                                <li>Page must be loaded into memory before any computation happens</li>
+                            </ul>
+                            <li>What if we want to scan the data file for multiple passes?</li>
+                            <ul>
+                                <li>Option 1: read/write the entire page on demand before reading/writing the integer ← very slow</li>
+                                <li>Option 2: read all data pages into memory at the beginning ← not scalable</li>
+                                <ul>
+                                    <li>May not fit in memory</li>
+                                    <li>What to do on modify?</li>
+                                    <ul>
+                                        <li>Immediately write back? Or Flush when program shuts down?</li>
+                                        <li>Data persistence?</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                            
+                        </ul>
+                        
+                    </div> 
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <p class=""><strong>Solution : Buffer Pool</strong></p>
+                    </div>
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <p class=""><strong>Buffer Manager: </strong>To manage the buffer pool, we need a buffer manager.</p>
+                        
+                        <ul>
+                            <li>Buffer manager manages a fixed-size pool of in-memory page frames which are of the same size as the data pages (e.g., 4KB)</li>
+                        </ul>
+                        <img class="img-fluid rounded" src="DBImages/buffermanager.png" style="width: 100vh;"/>
+                        <div class="border-left border-primary pt-2 pl-4 ml-2">
+                            <div class="position-relative mb-4">
+                                <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                <p class=""><strong>Handling Page Request</strong></p>
+                            </div> 
+                            <p>Suppose there comes a request to read page with pid = 100. Now here arises 2 scenarios:</p>
+                            <ul>
+                                <li>Page is not present in the buffer pool ← Buffer Miss</li>
+                                <li>Page is already in the buffer pool ← Buffer Hit</li>
+                                <li>Here is how the pseudo code will look like:</li>
+                                <img src="DBImages/buffermanagerpseudocode.png" style="width: 60vh;"/>
+                            </ul>
+                            <div class="position-relative mb-4">
+                                <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                <p class=""><strong>Buffer Eviction: </strong>To manage the buffer pool, we need a buffer manager.</p>
+                                <ul>
+                                    <li>What if we run out of buffer frames? e.g., we are scanning a table with N = 100 pages, but buffer pool size m = 10</li>
+                                </ul>
+                                <img src="DBImages/buffermanagerfull.png" style="width: 90vh;"/>
+                                <p>Different kind of policies can be used to decide on the victim i.e. the page to be discarded from the buffer pool.
+                                    Least Recently Used (LRU), Most Recently Used (MRU), and Clock being some of them.</p>
+                            </div> 
+                            <div class="position-relative mb-4">
+                                <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                <p>The concept of buffer pinning comes handy here.
+                                    <br>Potential problem with page eviction?
+                                    <ul>
+                                        <li>What if the evicted page is modified? (e.g., UPDATE A SET x = x + 10 WHERE …)</li>
+                                        <li> We must write modified page back before eviction</li>
+                                    </ul>
+                                    Problems with concurrency
+                                    <ul>
+                                        <li>One thread reading a block while the other tries to evict it</li>
+                                    </ul>
+                                    <img src="DBImages/bufferpin1.png" style="width: 90vh;"/>
+                                    <img src="DBImages/bufferpin2.png" style="width: 90vh;"/>
+                                    We wanted to implement LRU. But we didn’t. Although LRU is simple and intuitive (in theory), there were a few issues when we went into designing it:
+                                    <ul>
+                                        <li>How to remove a node in the middle of LRU list when there’s a buffer hit?</li>
+                                        <li>Also, using LRU can lead to Sequential Flooding:
+                                            <ul>
+                                                <li># buffer frames # pages in file means every existing page in the buffer gets evicted</li>
+                                                <li>Prevents buffer hit for other transactions working on other files</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    We went ahead with Clock as it is an approximation of LRU.
+                                </p>
+                            </div>
+                        </div>
+                        
+                           
+                    </div>    
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Implementation End-->
+    <div class="container-fluid pt-5" id="datalayout">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Data Layout and Access Methods</h5>
+            </div>
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p class="text-justify">In this phase, we built the page layout of data pages in Taco DB. This is the de facto standard of data pages inside Taco DB.
+                                We dealt with page compaction (lazy) here which was very interesting to say the least.
+                                We also built heap file (table) interface as an access method for accessing data.
+                            </p>        
+            
+                        </div>
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p class="text-justify">A heap file is simply an unordered (multi-)set of records. 
+                                It is the most basic way of organizing records in DBMS. 
+                                In Taco-DB, a heap file is implemented on top of the file manager managed virtual files and stores records in some arbitrary order in the list of pages.</p>        
+            
+                        </div>
+                        
+                        <img class="img-fluid rounded" src="DBImages/datalayout.png" style="width:40vh;"/>       
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-5" id="btree">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">B-Tree Index</h5>
+            </div>
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p class="text-justify">This is where we struggled a lot. Wrote code, debugged a lot, went back to design, thought about corner cases, wrote code again, debugged again. 
+                                But finally we did it. We built a self-balancing indexing structure from scratch.
+                                <br>This made us imprint the fact that always stays with us from then: <strong>“Weeks of coding can save you hours of planning”</strong>
+                            </p>        
+            
+                        </div>
+                    
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p class="text-justify">Index is something that makes the job of searching something faster. Remember, the index we have in the first pages of text books.
+                                Index is a data structure that speeds up search on a few fields on a relation.
+                            </p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p>B-Tree</p>
+                            <ul>
+                                <li>
+                                    B-Tree is a dynamic and self-balancing structure → all paths from root to leaf page has the same length i.e. tree height h
+                                        <img class="img-fluid rounded" src="DBImages/btree.png" style="width:50vh;"/>       
+                                    
+                                </li>
+                                <li>Adapts to insertion/deletion.</li>
+                                <li>Data entries are stored in the leaf pages; Index entries in internal pages.</li>
+                                <li>There’s a minimum occupancy for each page except for root (usually 50%).</li>
+                                <li>Each node in the tree is a page in the file.</li>
+                            </ul>
+                            
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p class="text-justify">We first implemented the barebones structure of B-Tree, then B-Tree Search, then supported B-Tree Insertion and Deletion. 
+                                It seems simple but I can assure you that it is not. You can find more info here.
+                            </p>
+                        </div>
+                        
+                        
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5" id="basicquery">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Basic Query Processing</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        So far we’ve built:
+                        <ul>
+                            <li>the layer that stores data on the disk</li>
+                            <li>the layer that helps database access the data pages i.e. Buffer Manager</li>
+                            <li>the layer that deals with record layout on a data page and heap file</li>
+                            <li>the layer that facilitates faster retrieval of data i.e. Indexes - BTree in our case</li>
+                        </ul>
+                        Now that we’ve have done all this, to actually retrieve data, what is the first thing that the database must do?
+
+                        Understand the request and process it.
+                    </div>
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <p class="text-justify">So we essentially built a query processor for Taco DB in this phase.
+                            The objective of this phase was to implement the physical plans and execution states for the basic operators 
+                            (eg: selection, projection, cartesian product, aggregation etc.) for query processing.
+                        </p>      
+                    </div>
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <p class="text-justify">Technically, we had an (almost) fully functioning single-threaded database (without a SQL parser and an optional query optimizer) after this phase. 
+                            The main theme of this phase was quite different from the previous phases. 
+                            It focused less on the implementation of algorithms and manipulation of bytes. 
+                            Rather it focused more on the common engineering patterns and the memory management.
+                            External sorting in Taco-DB is implemented as a separate component since it can be used in various scenarios.
+                        </p>      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5" id="joins">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Join Algorithms</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p class="text-justify">Joins are very common and also Joins are very expensive! Join results can be as large as the cartesian product.
+                                Many approaches to reduce join cost:
+                                <ul>
+                                    <li>Nested-loop join (simple/block/indexed) </li>
+                                    <li>Sort-Merge join </li>
+                                    <li>Hash join (basic hash partitioning vs hybrid hashing)</li>
+                                </ul>
+                                We implemented Sort-Merge join and Indexed version of Nested Loop join
+                            </p>        
+            
+                        </div>
+
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p class="text-justify">Sort Merge Join:</p>        
+                            <p class="text-justify">For the entire query processing layer, we used Volcano model for structuring the implementation of the operators.</p>
+                            <p class="text-justify">Suppose there are two relations R, E and they have a column in common, say <strong>sid</strong>
+
+                            Idea is to sort R on R.sid and sort E on E.sid. Merge them and emit the pairs with matching values on the join columns.</p>
+                            <img src="DBImages/sortmerge.png" style="width: 90vh;"/>
+                        </div>
+
+                        <div class="position-relative mb-4">
+        
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <p class="text-justify">Index Nested Loop Join:</p>        
+                            <p class="text-justify">Indexes, specifically B+-Trees in Taco DB, can be leveraged to perform certain types of joins. We implemented the index nested loop join for equi-joins in this project. </p>
+                            <p class="text-justify">As in the System-R style query plan, the inner relation of an index nested loop is always a table with an index built on top of a list of fields.
+                            The general idea of the index nested loop join is to use each output record of the outer plan to probe the provided index for the matching records from the inner table.</p>
+                            <img src="DBImages/indexnestedloopjoin.png" style="width: 70vh;"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5" id="queryplans">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center pt-5">
+                <h5 class="position-absolute text-uppercase text-primary">Building Optimized Query Plan</h5>
+            </div>
+        
+            <div class="col-lg-12 pt-5">
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+        
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <p class="text-justify"> Finally, to get a hint on how the entire query processing pipeline (planning, optimization, and execution) works, 
+                            we manually planned and optimized three queries for TPC-H, which is a common benchmark used to measure DBMS query performance.</p> 
+                            <img src="DBImages/queryoptimization.png" style="width: 90vh;"/>
+                    </div>
+                         
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        
+        <div class="container text-center py-5">
+        
+            <div class="d-flex justify-content-center mb-4">
+        
+                <a class="btn btn-light btn-social mr-2" href="http://www.linkedin.com/in/niharika-deshmukh/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                
+                <a class="btn btn-light btn-social mr-2" href="http://github.com/niharika-vdeshmukh" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a class="btn btn-light btn-social mr-2" href="mailto:niharikad2209@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+            </div>
+        
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+
+        </div>
+
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="Resume.pdf" class="btn px-0 btn-outline-dark resume"><i class="fa fa-download"></i></a>
+    <p class="resumetext">Resume</p>
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
