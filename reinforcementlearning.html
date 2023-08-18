@@ -81,13 +81,13 @@
                     <a href="#home" class="nav-item nav-link active">About Project</a>
                     <a href="#environment" class="nav-item nav-link">Environment Details</a>
                     <a href="#implementation" class="nav-item nav-link">Implementation Details</a>
-                    <a href="#qlearning" class="nav-item nav-link">Q-Learning Implementation Details</a>
-                    <a href="#sarsa" class="nav-item nav-link">SARSA Implementation Details</a>
-                    <a href="#dqn" class="nav-item nav-link">DQN Implementation Details</a>
-                    <a href="#ddqn" class="nav-item nav-link">DDQN Implementation Details</a>
-                    <a href="#qac" class="nav-item nav-link">Q-Actor Critic Implementation Details</a>
-                    <a href="#a2c" class="nav-item nav-link">Advantage Actor Implementation Details</a>
-                    <a href="#summary" class="nav-item nav-link">Summary</a>
+                    <a href="#summary" class="nav-item nav-link">Results</a>
+                    <a href="#qlearning" class="nav-item nav-link">Q-Learning Graphs</a>
+                    <a href="#sarsa" class="nav-item nav-link">SARSA Graphs</a>
+                    <a href="#dqn" class="nav-item nav-link">DQN Graphs</a>
+                    <a href="#ddqn" class="nav-item nav-link">DDQN Graphs</a>
+                    <a href="#qac" class="nav-item nav-link">Q-Actor Critic Graphs</a>
+                    <a href="#a2c" class="nav-item nav-link">Advantage Actor Critic Graphs</a>
                     </div>
 
                 </div>
@@ -95,16 +95,32 @@
                 <div class="col-lg-6">
 
                     <p class="text-justify">
-                        Traffic congestion is a major issue in cities and solving this problem will have an impact on many lives. 
+
+
+                        Hey there! Imagine a city where traffic jams are a thing of the past, and the endless chorus of honking horns becomes a distant memory. 
+                        Inspired by this vision, our trio of passionate minds embarked on a mission to confront a notorious urban challenge: traffic congestion. 
+                        Our playground? A a multi-agent environment- <a href="https://github.com/koulanurag/ma-gym" target="_blank">TrafficJunction</a>,
+                        where vehicles transform into AI-driven agents, and algorithms take the driver's seat in redefining traffic norms.
+
+
+                        <!-- Traffic congestion is a major issue in cities and solving this problem will have an impact on many lives. 
                         In this project we designed a multi-agent reinforcement learning algorithm to solve the problem of traffic congestion. 
                         For this project we used a multi-agent environment- <a href="https://github.com/koulanurag/ma-gym" target="_blank">TrafficJunction</a>. 
                         The environment is designed in a way that it aims to reduce traffic and number of collisions between vehicles. 
-                        Vehicles are agents in this environment. 
-                        To solve this environment we experimented with Tabular algorithms such as Q-learning, SARSA, deep Q-networks such as DQN, DDQN and actor critic methods.
+                        Vehicles are agents in this environment.  -->
+                        <!-- To solve this environment we experimented with Tabular algorithms such as Q-learning, SARSA, deep Q-networks such as DQN, DDQN and actor critic methods. -->
 
                     </p>
-                    <img src="RLImages/TrafficJunction4-v0.gif" width="200vh" height="200vh">
-                    
+                    <p class="text-justify">
+                        Diving into the world of multi-agent reinforcement learning, we unleashed AI agents onto the canvas of TrafficJunction's virtual streets. 
+                        Think of these agents as digital drivers infused with algorithmic intuition. 
+                        Our journey saw us experimenting with various approaches, from the foundational Q-learning and SARSA, to the dynamic potential of deep Q-networks (DQN). 
+                        Scaling our efforts, we explored DDQN and actor-critic methods, tapping into their technical prowess to address the complexities of urban congestion.
+                    </p>
+                    <!-- <img src="RLImages/TrafficJunction4-v0.gif" width="200vh" height="200vh"> -->
+                    <p class="text-justify">
+                        Embark on a journey with us as we harness AI's power to combat traffic congestion, turning city roads into seamless pathways of the future.
+                    </p>
                 </div>
 
             </div>
@@ -129,6 +145,8 @@
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
 
                             We used ma-gym, a collection of multi-agent environments based on openAI gym for this project.
+                            The environment is designed in a way that it aims to reduce traffic and number of collisions between vehicles. 
+
                         </p>
                     </div>
                     <div class="position-relative mb-2">
@@ -208,9 +226,11 @@
                             <p class="text-justify">        
                                 <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
     
-                                In this project we used ma-gym environment to develop a multi-agent algorithm to reduce traffic jam and accidents.
-                                To solve this environment we experimented with Tabular algorithms such as Q-learning, SARSA, deep Q-networks such as DQN, DDQN and actor critic methods.
-                                We trained environment using base configuration: 
+                                In this project, we introduced a multi-agent algorithm designed to untangle the urban chaos. 
+                                Imagine a symphony of algorithms orchestrating vehicles' movements to eliminate traffic snarls and minimize accidents. 
+                                Our toolbox was loaded with versatile strategies: classic Tabular algorithms like Q-learning and SARSA, coupled with the neural might of deep Q-networks (DQN), DDQN, and the intelligence of actor-critic methods.
+                                <br>
+                                Curious about our secret sauce? We cracked open the door to our training environment, revealing the base configuration that powered our experiments: 
                                 <br>Discount factor: 0.99
                                 <br>Learning rate: 0.2
                                 <br>Number of Episodes: 1000
@@ -221,10 +241,11 @@
                             <p class="text-justify">
                                 <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
     
-                                Initially we experimented with one agent for all the algorithms, after getting promising results we trained two agents for each algorithm.
-                                Both the agents knew the local observation of every agent, which improved learning. 
-                                Results were optimistic, thus we didn't have to configure reward function and we contniued with existing reward function.
-                                For every algorithm we tried to tune Hyperparameters, however we found that base configuration can work for all the algorithms.                             </p>        
+                                At first, a lone agent faced the challenge across all algorithms. 
+                                The promising outcomes spurred us on, leading us to the next level: two agents for each algorithm. 
+                                These agents shared local observations, sparking a leap in learning efficiency. 
+                                Surprisingly, our results were so optimistic that we stuck to the existing reward function, skipping the need for tweaks.
+                            </p>        
                         </div>  
                            
                         
@@ -235,11 +256,90 @@
     </div>
     <!--Implementation End-->
 
+        <!--Use case-->
+        <div class="container-fluid pt-5" id="summary">
+            <div class="container">
+                <div class="position-relative d-flex align-items-center pt-5">
+                    <h5 class="position-absolute text-uppercase text-primary">Results</h5>
+                </div>
+    
+                <div class="col-lg-12 pt-5">
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <p class="text-justify">
+                                Our journey into the realm of AI-driven traffic solutions began with a determined step: harnessing the power of Q-Learning and SARSA. 
+                                <br>Armed with a learning rate of 0.2 and a gamma value of 0.99, our algorithms embarked on their training, turning our multi-agent environment into a digital battleground against congestion and accidents.
+                                <br>
+                                <br>
+                                As the iterations unfolded, our environment flourished under the tutelage of Q-Learning and SARSA. The results were promising, with both algorithms showcasing their prowess. The average reward spoke volumes: -0.886 for Agent 1 and -3.409 for Agent 2 in the Q-Learning corner, and -0.886 and -3.487 for the two agents in the SARSA realm. 
+                                A glimpse into the efficiency of each algorithm, laying the groundwork for what was to come.
+                                <br>
+                                <br>
+                                Our toolkit expanded as we ventured into the world of DQN, Double DQN, Q Actor Critic, and Advantage Actor Critic. The arena was set, and the challenge was real. DQN and Double DQN embarked on a 10,000-episode journey, relentlessly working towards convergence. 
+                                On the other side, Q Actor Critic and Advantage Actor Critic chose the path of patience, spanning 20,000 episodes each to unearth their potential.
+                                <br>
+                                <br>
+                                Drumroll, please! The moment of truth arrived as we unveiled the average rewards achieved by each algorithm. DQN and Double DQN stood tall, showcasing their prowess after conquering their 10,000-episode trials. Q Actor Critic and Advantage Actor Critic proved their mettle through dedication, emerging triumphant after 20,000 episodes. The culmination of our efforts, as average rewards whispered tales of progress, learning, and the ever-improving landscape of AI-powered traffic solutions.
+    
+    Join us as we dive deeper into the algorithms' victories and lessons learned, unraveling the intricate dance between code and creativity that drove us toward a future where traffic woes bow down to AI's strategic prowess.
+                                Average reward for each algorithm is as follows:
+                                <table class="table table-striped table-hover table-bordered">
+                                    <tr>
+                                        <th>Algorithm</th>
+                                        <th>Number of episodes trained</th>
+                                        <th>Agent 1 average reward</th>
+                                        <th>Agent 2 average reward</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Q-Learning</td>
+                                        <td>30000</td>
+                                        <td>-0.886</td>
+                                        <td>-3.409</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SARSA</td>
+                                        <td>30000</td>
+                                        <td>-0.886</td>
+                                        <td>-3.487</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DQN</td>
+                                        <td>10000</td>
+                                        <td>-0.913</td>
+                                        <td>-0.967</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DDQN</td>
+                                        <td>10000</td>
+                                        <td>-0.887</td>
+                                        <td>-0.885</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q-Actor Critic</td>
+                                        <td>20000</td>
+                                        <td>-3.51</td>
+                                        <td>-0.885</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Advantage Actor Critic</td>
+                                        <td>20000</td>
+                                        <td>-1.64</td>
+                                        <td>-0.872</td>
+                                    </tr>
+                            </table>    
+                            </p>        
+                        </div>        
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
     <!--q-learning Start-->
     <div class="container-fluid pt-5" id="qlearning">
         <div class="container">
             <div class="position-relative d-flex align-items-center pt-5">
-                <h5 class="position-absolute text-uppercase text-primary">Q-Learning Implementation Details</h5>
+                <h5 class="position-absolute text-uppercase text-primary">Q-Learning Graphs</h5>
             </div>
         
             <div class="col-lg-12 pt-5">
@@ -269,7 +369,7 @@
     <div class="container-fluid pt-5" id="sarsa">
         <div class="container">
             <div class="position-relative d-flex align-items-center pt-5">
-                <h5 class="position-absolute text-uppercase text-primary">SARSA Implementation Details</h5>
+                <h5 class="position-absolute text-uppercase text-primary">SARSA Graphs</h5>
             </div>
         
             <div class="col-lg-12 pt-5">
@@ -299,7 +399,7 @@
     <div class="container-fluid pt-5" id="dqn">
         <div class="container">
             <div class="position-relative d-flex align-items-center pt-5">
-                <h5 class="position-absolute text-uppercase text-primary">DQN Implementation Details</h5>
+                <h5 class="position-absolute text-uppercase text-primary">DQN Graphs</h5>
             </div>
         
             <div class="col-lg-12 pt-5">
@@ -329,7 +429,7 @@
     <div class="container-fluid pt-5" id="ddqn">
         <div class="container">
             <div class="position-relative d-flex align-items-center pt-5">
-                <h5 class="position-absolute text-uppercase text-primary">DDQN Implementation Details</h5>
+                <h5 class="position-absolute text-uppercase text-primary">DDQN Graphs</h5>
             </div>
         
             <div class="col-lg-12 pt-5">
@@ -359,7 +459,7 @@
     <div class="container-fluid pt-5" id="qac">
         <div class="container">
             <div class="position-relative d-flex align-items-center pt-5">
-                <h5 class="position-absolute text-uppercase text-primary">Q-Actor Critic Implementation Details</h5>
+                <h5 class="position-absolute text-uppercase text-primary">Q-Actor Critic Graphs</h5>
             </div>
         
             <div class="col-lg-12 pt-5">
@@ -389,7 +489,7 @@
     <div class="container-fluid pt-5" id="a2c">
         <div class="container">
             <div class="position-relative d-flex align-items-center pt-5">
-                <h5 class="position-absolute text-uppercase text-primary">Advantage Actor Critic Implementation Details</h5>
+                <h5 class="position-absolute text-uppercase text-primary">Advantage Actor Critic Graphs</h5>
             </div>
         
             <div class="col-lg-12 pt-5">
@@ -419,77 +519,8 @@
 
     
 
-    <!--Use case-->
-    <div class="container-fluid pt-5" id="summary">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center pt-5">
-                <h5 class="position-absolute text-uppercase text-primary">Summary</h5>
-            </div>
 
-            <div class="col-lg-12 pt-5">
-                <div class="border-left border-primary pt-2 pl-4 ml-2">
-                    <div class="position-relative mb-4">
-                        <p class="text-justify">
-                            We started by training our environment on q-learning algorithm and SARSA. 
-                            <br>For both the experiments the learning rate used was 0.2 and gamma value was 0.99.  
-                            <br>The environment works well on both the algorithms. For Q-learning evaluation, we got  an average reward of -0.886 for agent 1 and  -3.409 for agent 2. 
-                            <br>For SARSA evaluation, we got an average reward of -0.886 for one agent and -3.487 for the other. 
-                            <br>Later we implemented DQN, Double DQN, Q actor critic and Advantage Actor Critic algorithm on our multi-agent environment. 
-                            <br>DQN and Double DQN took 10000 episodes each to achieve convergence whereas Q actor critic and Advantage actor critic took 20000 episodes each for getting better results.
-                            Average reward for each algorithm is as follows:
-                            <table class="table table-striped table-hover table-bordered">
-                                <tr>
-                                    <th>Algorithm</th>
-                                    <th>Number of episodes trained</th>
-                                    <th>Agent 1 average reward</th>
-                                    <th>Agent 2 average reward</th>
-                                </tr>
-                                <tr>
-                                    <td>Q-Learning</td>
-                                    <td>30000</td>
-                                    <td>-0.886</td>
-                                    <td>-3.409</td>
-                                </tr>
-                                <tr>
-                                    <td>SARSA</td>
-                                    <td>30000</td>
-                                    <td>-0.886</td>
-                                    <td>-3.487</td>
-                                </tr>
-                                <tr>
-                                    <td>DQN</td>
-                                    <td>10000</td>
-                                    <td>-0.913</td>
-                                    <td>-0.967</td>
-                                </tr>
-                                <tr>
-                                    <td>DDQN</td>
-                                    <td>10000</td>
-                                    <td>-0.887</td>
-                                    <td>-0.885</td>
-                                </tr>
-                                <tr>
-                                    <td>Q-Actor Critic</td>
-                                    <td>20000</td>
-                                    <td>-3.51</td>
-                                    <td>-0.885</td>
-                                </tr>
-                                <tr>
-                                    <td>Advantage Actor Critic</td>
-                                    <td>20000</td>
-                                    <td>-1.64</td>
-                                    <td>-0.872</td>
-                                </tr>
-                        </table>    
-                        </p>        
-                    </div>        
-                </div>
-            </div>
-        
-        </div>
-    </div>
     
-    <!--Use case End-->
     
 
     <!-- Footer Start -->
