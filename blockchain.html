@@ -79,9 +79,8 @@
                     <!-- <img class="img-fluid rounded w-100" src="img/about.jpg" alt=""> -->
                     <a href="#home" class="nav-item nav-link active">DomainBrew</a>
                     <a href="#issues" class="nav-item nav-link">Issues Addressed</a>
-                    <a href="#digitalassets" class="nav-item nav-link">Digital Asset</a>
-                    <a href="#usecase" class="nav-item nav-link">Usecase Diagram</a>
                     <a href="#implementation" class="nav-item nav-link">Implementation Details</a>
+                    <a href="#usecase" class="nav-item nav-link">Usecase Diagram</a>
                     <a href="#smartcontract" class="nav-item nav-link">SmartContract Diagram</a>
                     <a href="#sequencediagram" class="nav-item nav-link">Sequence Diagram</a>
                     <a href="#architecture" class="nav-item nav-link">Architecture Diagram</a>
@@ -143,24 +142,107 @@
     <!-- Skill End -->
 
     <!--Digital Assets-->
-    <div class="container-fluid pt-5" id="digitalassets">
+    <div class="container-fluid pt-5" id="implementation">
         <div class="container">
+            
             <div class="position-relative d-flex align-items-center pt-5">
-                <h5 class="position-absolute text-uppercase text-primary">Digital asset and token</h5>
+                <h5 class="position-absolute text-uppercase text-primary">Implementation Details</h5>
             </div>
         
             <div class="col-lg-12 pt-5">
                 <div class="border-left border-primary pt-2 pl-4 ml-2">
                     <div class="position-relative mb-4">
-                        <p class="text-justify">
-                            Domain name is the digital asset which we are using for this project. 
-                            For all the transactions like buying a domain, selling a domain we are tokenizing domain names as NFT. 
-                            And every user who wishes to buy this NFT will have the NFT token in their account. 
-                            For tokenizing the domain name we are using ERC721 standard.
+                        <div class="position-relative mb-4">
+                            <h6 class="text-uppercase text-primary">Domain Name Tokenization:</h6>    
 
-                        </p>        
+                            <div class="border-left border-primary pt-2 pl-4 ml-2">
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    To represent domain names as digital assets, the project tokenizes them as NFTs (Non-Fungible Tokens).                            
+                                </div>
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    Token Standard: ERC721 is used to create unique NFTs for each domain name.                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <h6 class="text-uppercase text-primary">Smart Contracts:</h6>    
+
+                            <div class="border-left border-primary pt-2 pl-4 ml-2">
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    Smart contracts are written in Solidity and deployed on the Sepolia network. 
+                                </div>                               
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    Key Smart Contracts:
+                                    <ul>
+                                        <li>DomainToken: Manages the creation and transfer of domain name NFTs.</li>
+                                        <li>Auction: Facilitates domain name auctions.</li>
+                                        <li>Ownership: Keeps track of ownership history.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <h6 class="text-uppercase text-primary">Frontend (React.js):</h6>    
+
+                            <div class="border-left border-primary pt-2 pl-4 ml-2">
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                        The frontend is developed using React.js, providing a user-friendly interface for interacting with the blockchain.
+                                </div>                                    
+                                <div class="position-relative mb-4">
+                                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                        Key Features:
+                                        <ul>
+                                            <li>User registration and authentication.</li>
+                                            <li>Domain name browsing and searching.</li>
+                                            <li>Buying and selling domains through NFT transactions.</li>
+                                            <li>Viewing NFTs and transaction history through MetaMask integration.</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="position-relative mb-4">
+                            <h6 class="text-uppercase text-primary">Offchain Data (Express.js, AWS RDS):</h6>    
+
+                            <div class="border-left border-primary pt-2 pl-4 ml-2">
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    AWS RDS is used as the relational database to store essential project data.
+                                </div>
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    It includes data that doesn't need to be on-chain, such as user profiles, domain descriptions, and metadata.
+                                </div>
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    Express.js is used to create a RESTful API service to connect the frontend with offchain data in AWS RDS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <h6 class="text-uppercase text-primary">Deployment:</h6>    
+
+                            <div class="border-left border-primary pt-2 pl-4 ml-2">
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    The project is hosted on the Heroku platform for web app accessibility.                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                </div>
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    Smart contracts are deployed to the Sepolia network.
+                                </div>
+                                <div class="position-relative mb-4">
+                                    <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                                    MetaMask is integrated into the frontend to enable users to track their NFTs and perform blockchain transactions securely.
+                                </div>
+                            </div>
+                        </div>
                     </div>        
-                </div>
+                </div>        
             </div>
         </div>
     </div>
@@ -184,27 +266,6 @@
     </div>
     
     <!--Use case End-->
-
-    <!--Implementation Start-->
-    <div class="container-fluid pt-5" id="implementation">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center pt-5">
-                <h5 class="position-absolute text-uppercase text-primary">Implementation Details</h5>
-            </div>
-        
-            <div class="col-lg-12 pt-5">
-                <div class="border-left border-primary pt-2 pl-4 ml-2">
-                    <div class="position-relative mb-4">
-                        <p class="text-justify">
-                            In this project we developed frontend and backend for domain name application.
-
-                        </p>        
-                    </div>        
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Implementation End-->
 
     <!--Smart Contract Diagram case-->
     <div class="container-fluid pt-5" id="smartcontract">
